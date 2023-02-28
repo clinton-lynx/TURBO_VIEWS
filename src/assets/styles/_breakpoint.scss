@@ -11,7 +11,7 @@ $xl: 1200px; // DESKTOP SCREEN SIZES
 // RESPONSIVE iCLASS MINIMUN MEDIA QUERY WIDTH
 //=============================================
 @mixin breakpoint-up($breakpoint) {
-  @if $breakpoint==$xs {
+  @if $breakpoint==$xs {  
     @media only screen and (min-width: $xs) {
       @content;
     }

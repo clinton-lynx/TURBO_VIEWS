@@ -1,0 +1,117 @@
+@import "../../assets/styles/main";
+
+.header-wrapper {
+  padding: 1rem 2.4rem;
+  background-color: $backgroundColor;
+  @include breakpoint-down($md) {
+    padding: 0.75rem 0.4rem;
+  }
+  .header {
+    max-width: 1444px;
+    align-self: center;
+    margin:  0 auto;
+    @include flex-row-between-wrap;
+  }
+}
+
+.header_left {
+  width: 30%;
+  @include flex-row-start-nowrap;
+  @include breakpoint-down($md) {
+    // @include flex-row-end-wrap;
+    width: 20%;
+  }
+  align-items: baseline;
+  .logo-wrapper {
+    // margin-left: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}
+.toggle-tab-wrapper {
+  margin-right: 0.5rem;
+  @include breakpoint-down($md) {
+    display: none;
+  }
+}
+.toggle-tab {
+  background-color: #1e2a3a;
+  padding: 1rem 1.1rem;
+  border-radius: 50%;
+}
+.logo {
+  @include breakpoint-down($md) {
+    display: none;
+  }
+}
+.logo-mobile {
+  @include breakpoint-up($md) {
+    display: none;
+  }
+  .logo-mobile__turbo {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: $focusedOutline;
+  }
+  .logo-mobile__views {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-style: italic;
+    color: $white;
+  }
+}
+.logo__turbo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: $focusedOutline;
+}
+.logo__views {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-style: italic;
+  color: $white;
+}
+
+.header__middle {
+  width: 50%;
+  @include flex-row-start-nowrap;
+  @include breakpoint-down($md) {
+    @include flex-row-end-nowrap;
+    width: 80%;
+  }
+  .searchbar {
+    @include flex-row-between-nowrap;
+    width: 100%;
+    max-width: 400px;
+    background-color: $glassBackground;
+    border-radius: 15px;
+    margin-right: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    .header__input {
+      background-color: transparent;
+      font-size: 1.6rem;
+      outline: none;
+      border: none;
+      font-style: italic;
+      color: $white;
+      padding: 0.5rem;
+      margin-right: 1px;
+    }
+  }
+}
+
+.header__right {
+  width: 15%;
+  @include breakpoint-down($md) {
+    display: none;
+    width: 0;
+  }
+  // margin-left: .1rem;
+  @include flex-row-between-nowrap;
+  .camera-wrapper,
+  .notify-wrapper,
+  .user-avatar-wrappe {
+    // margin-right: 1rem;
+  }
+}
