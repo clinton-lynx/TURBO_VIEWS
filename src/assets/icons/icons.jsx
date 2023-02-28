@@ -46,8 +46,8 @@ export function Home(){
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="31"
-      height="27"
+      width="28"
+      height="23"
       fill="none"
       viewBox="0 0 31 27"
     >
@@ -63,8 +63,8 @@ export function Library(){
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="31"
-      height="31"
+      width="26"
+      height="26"
       fill="none"
       viewBox="0 0 31 31"
     >
@@ -83,8 +83,8 @@ export function Playlist(){
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="31"
-      height="31"
+      width="26"
+      height="26"
       fill="none"
       viewBox="0 0 31 31"
     >
@@ -112,8 +112,8 @@ export function VideoPlay(){
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="31"
-      height="31"
+      width="26"
+      height="26"
       fill="none"
       viewBox="0 0 31 31"
     >
@@ -137,8 +137,8 @@ export function  Explore(){
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="26"
-      height="26"
+      width="22"
+      height="22"
       fill="none"
       viewBox="0 0 26 26"
     >

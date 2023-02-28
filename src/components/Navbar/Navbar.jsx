@@ -18,6 +18,7 @@ const Navbar = () => {
             <div className="toggle-tab">
               <ToggleSideBar />
             </div>
+            
           </div>
           <div className="logo-wrapper">
             <div className="logo">
@@ -57,7 +58,7 @@ const Navbar = () => {
           </div>
           <div className="user-avatar-wrapper">
             <div className="user">
-              <img src="./user.png" alt="user" />
+              <img src="./user (3).png" alt="user" />
             </div>
           </div>
         </div>

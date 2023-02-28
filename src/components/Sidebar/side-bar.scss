@@ -1,0 +1,24 @@
+@import '../../assets/styles/main';
+
+
+.side-bar{
+    background-color: $backgroundColor;
+    height: 90vh;
+    // display: flex;
+    // align-items: stretch;
+    max-width:8rem ;
+}
+.side-bar-list{
+    @include flex-column-start-start;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    padding-top: 40px;
+}
+
+.side-tab{
+    margin: 2rem 0;
+&-name{
+    font-style: italic  ;
+}    
+}

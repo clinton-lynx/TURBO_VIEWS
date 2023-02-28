@@ -3,8 +3,10 @@
 .header-wrapper {
   padding: 1rem 2.4rem;
   background-color: $backgroundColor;
+  height: 10vh;
   @include breakpoint-down($md) {
     padding: 0.75rem 0.4rem;
+    height: 100%;
   }
   .header {
     max-width: 1444px;
