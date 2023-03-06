@@ -1,14 +1,42 @@
 @import "../../assets/styles/main";
 
-.videoplay {
-  padding: 5rem 2rem;
-  margin-top: 65px;
+
+.videoplay-wrapper{
   background-color: $backgroundColor;
+  margin-top: 65px;
+  
+}
+.videoplay {
+  padding: 5rem 5rem;
+  margin: 0 auto;
+  max-width: 1300px;
   color: $white;
+
+
+  @include flex-row-between-nowrap;
+  align-items: flex-start;
+
+  @include breakpoint-down(1000px) {
+    @include flex-column-start-center;
+    padding: 5rem 1rem;
+  }
 }
 
 .video-play__left {
   max-width: 800px;
+  width: 60%;
+  @include breakpoint-down(1000px) {
+    width: 100%;
+  }
+}
+.video-play__right {
+  width: 40%;
+  @include breakpoint-down(1000px) {
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+  margin-left: 3rem;
 }
 
 .video-play__info-wrapper {
@@ -27,6 +55,9 @@
     }
     .video-play__details-wrapper {
       @include flex-row-between-nowrap;
+      @include breakpoint-down(925px) {
+        display: none;
+      }
       .video-play__views {
         margin-right: 3rem;
       }
@@ -52,21 +83,23 @@
       letter-spacing: 0em;
       text-align: left;
     }
-
-    .view-icon,
-    .like-icon {
-      vertical-align: middle;
-      margin-right: 0.5rem;
-    }
   }
 }
 
+.view-icon,
+.like-icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
 .video-play__channel-info {
   @include flex-row-between-nowrap;
   margin-top: 2.5rem;
-
+  @include breakpoint-down(925px) {
+    @include flex-column-start-start;
+  }
   .video-play__channel-info__left {
     @include flex-row-between-nowrap;
+    margin-bottom: 2rem;
     .video-play__channel-icon {
       width: 60px;
     }
@@ -88,9 +121,12 @@
       letter-spacing: 0em;
       text-align: left;
     }
-  
   }
-  .sub-btn{
+  .video-play__channel-info__right {
+    width: 100%;
+  }
+
+  .sub-btn {
     border: none;
     background-color: $white;
     color: #081424;
@@ -98,64 +134,71 @@
     font-size: 1.6rem;
     font-weight: 400;
     text-transform: capitalize;
-    padding: .75rem 2rem;
+    padding: 0.75rem 2rem;
+    @include breakpoint-down(925px) {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
 }
 
-
-.creator-details{
+.creator-details {
   margin-top: 2.5rem;
-.creator__name{
-  // font-family: Montserrat;
-font-size: 1.6rem;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-}
-.creator__stream{
-  margin-top: 2rem;
-  .creator__stream--title{
+  .creator__name {
     // font-family: Montserrat;
-font-size: 1.6rem;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-}
-.creator__stream--link{
-  @extend .creator__stream--title;
-  color: #428DF0;
-}
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .creator__stream {
+    margin-top: 2rem;
+    .creator__stream--title {
+      // font-family: Montserrat;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .creator__stream--link {
+      @extend .creator__stream--title;
+      color: #428df0;
+    }
+  }
 }
 
-}
-
-.creator__socials-wrapper{
+.creator__socials-wrapper {
   margin-top: 2.5rem;
-  .creator__socials--follow-wrapper{
+  .creator__socials--follow-wrapper {
     margin-bottom: 1rem;
   }
- .creator__socials--follow{
-  // font-family: Montserrat;
-font-size: 1.6rem;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-
- } 
- .creator__socials-wrapper{
-  margin: 1.5rem 0;
- }
- .creator__socials{
-  font-size: 1.6rem;
-color: #428DF0;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-
- }
+  .creator__socials--follow {
+    // font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .creator__socials-wrapper {
+    margin: 1.5rem 0;
+  }
+  .creator__socials {
+    font-size: 1.6rem;
+    color: #428df0;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
+.next-videos__title-wrapper {
+  margin-bottom: 3rem;
+  .next-videos__title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}

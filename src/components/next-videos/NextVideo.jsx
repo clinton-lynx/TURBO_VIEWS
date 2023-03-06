@@ -1,4 +1,6 @@
 import React from "react";
+import { View } from "../../assets/icons/icons";
+import './next-video.scss';
 
 const NextVideo = () => {
   return (
@@ -13,7 +15,7 @@ const NextVideo = () => {
         </div>
         <div className="next-videocard__info">
           <div className="next-videocard__title-wrapper">
-            <h3 className="next-videocard__title"></h3>
+            <h3 className="next-videocard__title">Sabinus the business guru</h3>
           </div>
           <div className="next-videocard__channel-info">
             <div className="next-videocard__channel-icon-wrapper">
@@ -24,18 +26,20 @@ const NextVideo = () => {
               />
             </div>
             <div className="next-videocard__channel-name-wrapper">
-              <h5 className="next-videocard__channel-name"></h5>
+              <h5 className="next-videocard__channel-name">Oga Sabinus</h5>
             </div>
           </div>
           <div className="next-videocard__view-info-wrapper">
-          <div className="video-play__views">
-                  <span className="view-icon"><View /></span>
-                  <span className="video-play__views-amt-wrapper">
-                    <span className="video-play__views-amt">
-                      328k views- 2days ago
-                    </span>
-                  </span>
-                </div>
+            <div className="next-videocard__view-info__views">
+              <span className="view-icon">
+                <View />
+              </span>
+              <span className="next-videocard__view-info__views-amt-wrapper">
+                <span className="next-videocard__view-info__views-amt">
+                  328k views- 2days ago
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>

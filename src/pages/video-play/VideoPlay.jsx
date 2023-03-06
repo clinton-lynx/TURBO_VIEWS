@@ -11,6 +11,7 @@ const VideoPlay = () => {
   return (
     <div>
       <Navbar />
+      <div className="videoplay-wrapper">
       <div className="videoplay">
         <div className="video-play__left">
           <div className="videoplay-wrapper">
@@ -109,14 +110,23 @@ const VideoPlay = () => {
           </div>
           <div className="next-videos-wrapper">
             <NextVideo />
-            {/* <NextVideo />
             <NextVideo />
             <NextVideo />
             <NextVideo />
             <NextVideo />
-            <NextVideo /> */}
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
+            <NextVideo />
           </div>
         </div>
+    </div>
     </div>
         </div>
   );
