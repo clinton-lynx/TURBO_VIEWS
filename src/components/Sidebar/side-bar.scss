@@ -3,17 +3,28 @@
 
 .side-bar{
     background-color: $backgroundColor;
-    height: 90vh;
+    // height: 90vh;
     // display: flex;
+    color: $white;
     // align-items: stretch;
     max-width:8rem ;
+    position: fixed;
+    z-index: 1;
+    // display: none;
+    // top:
+    width: 76px; 
+    bottom: 0;
+    top: 60px;
+    @include breakpoint-down($md){
+        display: none;
+    }
 }
 .side-bar-list{
     @include flex-column-start-start;
     align-items: center;
     justify-content: start;
     height: 100%;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .side-tab{

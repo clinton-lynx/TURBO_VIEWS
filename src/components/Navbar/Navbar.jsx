@@ -18,7 +18,6 @@ const Navbar = () => {
             <div className="toggle-tab">
               <ToggleSideBar />
             </div>
-            
           </div>
           <div className="logo-wrapper">
             <div className="logo">
@@ -29,12 +28,11 @@ const Navbar = () => {
               <span className="logo-mobile__turbo">T</span>
               <span className="logo-mobile__views">v</span>
             </div>
-
           </div>
         </div>
         <div className="header__middle">
           <div className="searchbar">
-            <input className="header__input" placeholder='Search' type="text" />
+            <input className="header__input" placeholder="Search" type="text" />
             <div className="search-wrapper">
               <SearchIcon />
             </div>
@@ -58,7 +56,7 @@ const Navbar = () => {
           </div>
           <div className="user-avatar-wrapper">
             <div className="user">
-              <img src="./user (3).png" alt="user" />
+              <img alt="user" src={require("../../assets/images/user.png")} />
             </div>
           </div>
         </div>

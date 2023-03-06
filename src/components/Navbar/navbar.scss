@@ -1,18 +1,24 @@
 @import "../../assets/styles/main";
 
 .header-wrapper {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  color: $white;
+  left: 0;
   padding: 1rem 2.4rem;
   background-color: $backgroundColor;
-  height: 10vh;
+  // height: 10vh;
   @include breakpoint-down($md) {
     padding: 0.75rem 0.4rem;
-    height: 100%;
+    // height: 100%; 
   }
   .header {
     max-width: 1444px;
     align-self: center;
     margin:  0 auto;
-    @include flex-row-between-wrap;
+    @include flex-row-between-nowrap;
   }
 }
 
@@ -95,25 +101,35 @@
       font-size: 1.6rem;
       outline: none;
       border: none;
-      font-style: italic;
+      // font-sty/le: italic;
+      width: 100%;
       color: $white;
-      padding: 0.5rem;
+      padding: 0.875rem;
       margin-right: 1px;
     }
   }
 }
 
 .header__right {
-  width: 15%;
+  width: 20%;
   @include breakpoint-down($md) {
     display: none;
     width: 0;
   }
-  // margin-left: .1rem;
+  margin-left: .1rem;
   @include flex-row-between-nowrap;
+  justify-content: flex-end;
   .camera-wrapper,
   .notify-wrapper,
   .user-avatar-wrappe {
-    // margin-right: 1rem;
+    margin-right: 1.5rem;
+  }
+  .user-avatar-wrapper{
+    .user{
+      width: 35px;
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }
