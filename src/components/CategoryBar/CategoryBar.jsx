@@ -1,35 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Categories } from "../../utils/Categories";
 import "./category-bar.scss";
 // import
 
-const CategoryBar = () => {
+const CategoryBar = ({ categories, setCategory }) => {
+    console.log(categories);
+
+
   return (
     <div className="category-list-wrapper">
-      <div className="categories">
+      <div onClick={() => console.log(categories)} className="categories">
         <ul className="category-list">
-          <li className="category">all</li>
-          <li className="category">some</li>
-          <li className="category">design</li>
-          <li className="category">few</li> 
-          <li className="category">clinton</li>
-          {/* <li className="category">lynx</li> */}
-          <li className="category">lucas</li>
-          <li className="category">ade</li>
-          <li className="category">all</li>
-          <li className="category">some</li>
-          <li className="category">few</li>
-          <li className="category">design</li>
-          <li className="category">design</li>
-          <li className="category">clinton</li>
-          <li className="category">lynx</li>
-          <li className="category">lucas</li>
-          <li className="category">lucas</li>
-          <li className="category">ade</li>
-          <li className="category">akin</li>
-          <li className="category">money</li>
+          {Categories.map((category) => (
+            <li className="category">
+              <Link
+                to={"/"}
+                onClick={() => setCategory(category)}
+                className={category === categories ? "active" : "inactive"}
+              >
+                <span className="category-name">{category}</span>
+              </Link>
+            </li>
+          ))}
         </ul>
-      </div>
     </div>
+      </div>
   );
 };
 

@@ -16,12 +16,12 @@ color: $white;
 .categories {
     @include breakpoint-down($md){
         margin-left: 0;
-    }  margin-left: 85px;
+    }  margin-left: 100px;
 }
 .category-list {
   @include flex-row-between-nowrap;
   background-color: $backgroundColor;
-  max-width: 1000px;
+  max-width: 1300px;
   transition: all 700ms ease-in-out;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -32,8 +32,15 @@ color: $white;
   }
 
   .category {
+    .active{
+      color: $focusedOutline;
+    }
+    .inactive{
+      color: $white;
+    }
     text-transform: capitalize;
     margin-right: 3rem;
+    white-space: nowrap;
     font-weight: 500;
     font-size: 1.6rem;
     @include breakpoint-down($md){

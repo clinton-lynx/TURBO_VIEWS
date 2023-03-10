@@ -4,6 +4,16 @@
 .video-card-wrapper{
     max-width: 300px;
     margin: 0 auto;
+  }
+  
+  .video-card__thumbnail-wrapper{
+    border-radius: 100.5rem;
+    .video-card__thumbnail{
+  height: 152px;
+    object-fit: contain;
+    max-width: 100%;
+    border-radius: 1.5rem;
+  }
 }
 .video-card {
     color: $white;
@@ -21,15 +31,15 @@
   }
 
   .video-channel-details {
-    @include flex-row-between-nowrap;
-    justify-content: flex-start;
+    // @include flex-row-between-nowrap;
+    // justify-content: flex-start;
     .video-channel-icon-wrapper {
       margin-right: 1rem;
     }
   }
 
   .video-channel-title-wrapper {
-    margin: 1rem 0;
+    margin: .35rem 0 0rem;
     .video-channel-title {
       // font-family: Montserrat;
       font-size: 1.4rem;
@@ -37,14 +47,16 @@
       line-height: 22px;
       letter-spacing: 0em;
       text-align: left;
+      text-transform: capitalize;
     }
   }
 
   .video-info-wrapper {
-    margin-bottom: .875rem;
+    // margin-bottom: .875rem;
     .video-info {
     //   font-family: Montserrat;
       font-size: 1.35rem;
+      text-transform: capitalize;
       font-weight: 400;
       color: #C4C4C4;
       line-height: 22px;

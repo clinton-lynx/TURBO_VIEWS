@@ -109,7 +109,9 @@
     }
   }
 }
-
+.search-wrapper{
+  cursor: pointer;
+}
 .header__right {
   width: 20%;
   @include breakpoint-down($md) {

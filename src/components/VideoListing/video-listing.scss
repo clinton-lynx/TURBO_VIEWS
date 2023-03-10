@@ -22,7 +22,7 @@
   background-color: $backgroundColor;
 //   @include flex-row-between-wrap;
   display: grid;
-  grid-gap: 0.1rem;
+  grid-gap: 1.5rem;
 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);

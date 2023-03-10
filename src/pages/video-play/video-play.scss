@@ -94,7 +94,7 @@
 .video-play__channel-info {
   @include flex-row-between-nowrap;
   margin-top: 2.5rem;
-  @include breakpoint-down(925px) {
+  @include breakpoint-down(625px) {
     @include flex-column-start-start;
   }
   .video-play__channel-info__left {
@@ -123,7 +123,9 @@
     }
   }
   .video-play__channel-info__right {
-    width: 100%;
+    @include breakpoint-down(625px) {
+      width: 100%;
+    }
   }
 
   .sub-btn {
@@ -135,7 +137,7 @@
     font-weight: 400;
     text-transform: capitalize;
     padding: 0.75rem 2rem;
-    @include breakpoint-down(925px) {
+    @include breakpoint-down(625px) {
       width: 100%;
       border-radius: 5px;
     }

@@ -1,35 +1,54 @@
-@import '../../assets/styles/main';
+@import "../../assets/styles/main";
 
+.side-bar {
+  background-color: $backgroundColor;
+  // height: 90vh;
+  // display: flex;
+  color: $white;
+  // align-items: stretch;
+  max-width: 7.5rem;
+  position: fixed;
+  z-index: 1;
+  // display: none;
+  // top:
+  width: 100%;
+  bottom: 0;
+  top: 6.5rem;
+  @include breakpoint-down($md) {
+    display: none;
+  }
+}
+.side-bar-list {
+  @include flex-column-start-start;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  padding-top: 20px;
+}
 
-.side-bar{
-    background-color: $backgroundColor;
-    // height: 90vh;
-    // display: flex;
-    color: $white;
-    // align-items: stretch;
-    max-width:8rem ;
-    position: fixed;
-    z-index: 1;
-    // display: none;
-    // top:
-    width: 76px; 
-    bottom: 0;
-    top: 60px;
-    @include breakpoint-down($md){
-        display: none;
+.side-tab-wrapper {
+  margin: 2rem 0;
+  .active{
+    .side-tab-name{
+      color: $focusedOutline;
     }
-}
-.side-bar-list{
-    @include flex-column-start-start;
-    align-items: center;
-    justify-content: start;
-    height: 100%;
-    padding-top: 20px;
-}
+    .side-tab-icon{
+      path{ 
+        fill: $focusedOutline;
+      }
+    }
+  }
 
-.side-tab{
-    margin: 2rem 0;
-&-name{
-    font-style: italic  ;
-}    
+  .side-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-name {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: $white;
+    }
+ 
+  }
 }

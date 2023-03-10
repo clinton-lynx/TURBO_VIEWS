@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Mic,
   Notifications,
@@ -9,31 +10,39 @@ import {
 // import { ToggleSideBar } from './../assets/icons/icons';
 import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({searchHandler}) => {
   return (
     <div className="header-wrapper">
       <header className="header">
         <div className="header_left">
           <div className="toggle-tab-wrapper">
-            <div className="toggle-tab">
+            <div className="toggle-tab"
+                  onClick={() => {console.log('green');}}
+      
+            >
               <ToggleSideBar />
             </div>
           </div>
           <div className="logo-wrapper">
-            <div className="logo">
+            <Link to='/' className="logo">
               <span className="logo__turbo">Turbo</span>
               <span className="logo__views">views</span>
-            </div>
-            <div className="logo-mobile">
+            </Link>
+            <Link to='/' className="logo-mobile">
               <span className="logo-mobile__turbo">T</span>
               <span className="logo-mobile__views">v</span>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="header__middle">
           <div className="searchbar">
-            <input className="header__input" placeholder="Search" type="text" />
-            <div className="search-wrapper">
+            <input 
+                        // onChange={searchHandler}
+            className="header__input" 
+            placeholder="Search" type="text" />
+            <div 
+                        onClick={searchHandler}
+            className="search-wrapper">
               <SearchIcon />
             </div>
           </div>
