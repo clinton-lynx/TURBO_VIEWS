@@ -8,7 +8,7 @@ const options = {
     // q: 'music',
     // part: 'snippet,id',
     regionCode: 'NG',
-    maxResults: '100',
+    maxResults: '10000',
     // order: 'date',
   },
   headers: {
@@ -21,7 +21,6 @@ export const fetchAPI = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`,options);
   return data;
 // console.log(data) ;
-
 };
 const exp = '31068d680cmshd80b954efa430c5p1d7b8bjsn34ff62722862'
 

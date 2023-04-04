@@ -9,7 +9,7 @@ import { fetchAPI } from "../utils/fetchAPI";
 const Home = () => {
 
   const [video , setVideo] = useState([]);
-  const [categories , setCategory] = useState('asake');
+  const [categories , setCategory] = useState('all');
   console.log(categories);
 
 

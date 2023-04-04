@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import moment from 'moment';
+import millify from 'millify';
 import "./video-play.scss";
 import CategoryBar from "../../components/CategoryBar/CategoryBar";
 import Navbar from "../../components/Navbar/Navbar";
@@ -6,26 +8,67 @@ import SideBar from "../../components/Sidebar/SideBar";
 import VideoListing from "../../components/VideoListing/VideoListing";
 import NextVideo from "../../components/next-videos/NextVideo";
 import { Dislike, Like, View } from "../../assets/icons/icons";
+import ReactPlayer from "react-player/youtube";
+import { DefaultPlayer as Video } from 'react-html5video';
+import {useParams} from 'react-router-dom';
+import 'react-html5video/dist/styles.css';
+import { fetchAPI } from "../../utils/fetchAPI";
 
-const VideoPlay = () => {
+const VideoPlay = () => { 
+
+  const [videoDetails , setVideoDetails] = useState([]);
+
+
+  const videoId = useParams().id; 
+console.log('wakanda');
+     
+  useEffect(() => {
+    fetchAPI(`videos?part=snippet&id=${videoId}`).then((data) => setVideoDetails(data.items));
+    // setVideo(data)
+    console.log(videoDetails);
+  }, [videoId]);
+  console.log(videoDetails);
+
   return (
     <div>
       <Navbar />
       <div className="videoplay-wrapper">
       <div className="videoplay">
         <div className="video-play__left">
-          <div className="videoplay-wrapper">
+          <div className="video-play-frame-wrapper">
             <div className="video-play-frame">
-              <img
+              {/* <img
                 src={require("../../assets/images/video-play.png")}
                 alt="playing video"
+              /> */}
+              <ReactPlayer 
+                  className='react-player'
+                  url={`https://www.youtube.com/watch?v=${videoId}`}  
+                  width={`inherit`}    
+                  // height={`inherit`}        
+                  height={`410px`}     
+                  controls = {true}  
+                  style={{
+                    borderRadius: '200px',
+                    
+                  } }
               />
+               {/* <Video autoPlay loop muted
+            controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+            poster="http://sourceposter.jpg"
+            onCanPlayThrough={() => {
+                // Do stuff
+            }}>
+
+            <source src="https://www.youtube.com/watch?v=QumlJTVhVCc" type="video" />
+            <track label="English" kind="subtitles" srcLang="en" src="https://www.youtube.com/watch?v=QumlJTVhVCc" default />
+        </Video> */}
             </div>
             <div className="video-play__info-wrapper">
             <div className="video-play__info">
               <div className="video-play__title-wrapper">
                 <h3 className="video-play__title">
-                  Asake - Joha (official video)
+                 {videoDetails[0]?.snippet?.localized?.title}
                 </h3>
               </div>
               <div className="video-play__details-wrapper">
@@ -33,14 +76,14 @@ const VideoPlay = () => {
                   <span className="view-icon"><View /></span>
                   <span className="video-play__views-amt-wrapper">
                     <span className="video-play__views-amt">
-                      328k views- 2days ago
+                     {millify( videoDetails[0]?.statistics?.viewCount, {precision: 3})} views-{moment(videoDetails[0]?.snippet?.publishedAt,"YYYYMMDD").fromNow()} 
                     </span>
                   </span>
                 </div>
                 <div className="video-play__likes">
                   <span className="like-icon"><Like /></span>
                   <span className="video-play__like-amt-wrapper">
-                    <span className="video-play__likes-amt">298k</span>
+                    <span className="video-play__likes-amt">{ videoDetails[0]?.statistics.likeCount}</span>
                   </span>
                 </div>
                 <div className="video-play__dislike">
@@ -63,7 +106,7 @@ const VideoPlay = () => {
                 <div className="video-play__channel-details-wrapper">
                   <div className="video-play__channel-name-wrapper">
                     <h4 className="video-play__channel-name">
-                      Asake (Mr money)
+                    {videoDetails[0]?.snippet?.channelTitle}
                     </h4>
                   </div>
                   <div className="video-play__channel-subs-wrapper">

@@ -28,7 +28,7 @@ function App() {
         <Route path="gaming" element={<Game />} />
         <Route path="music" element={<Music />} />
         <Route path="sport" element={<Sport />} />
-        <Route path="/videoplay" element={<VideoPlay />} />
+        <Route path="/videoplay/:id" element={<VideoPlay />} />
       </Routes>
     </BrowserRouter>
   );

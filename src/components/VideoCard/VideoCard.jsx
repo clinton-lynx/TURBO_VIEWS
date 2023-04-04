@@ -5,11 +5,11 @@ import { fetchAPI } from "../../utils/fetchAPI";
 
 
 
-const VideoCard = ({title, thumbnail,channelTitle, releaseTime}) => {
+const VideoCard = ({title,link,thumbnail,channelTitle, releaseTime}) => {
   
     return (
     <>
-      <Link to='/videoplay' className="video-card-wrapper">
+      <Link to={link} className="video-card-wrapper">
         <div className="video-card">
           <div className="video-card__thumbnail-wrapper">
             <img

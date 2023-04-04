@@ -15,6 +15,7 @@ const VideoListing = ({videos}) => {
       {videos.map(video =>(
         <VideoCard 
           title={video.snippet?.title}
+          link={`videoplay/${video.id.videoId}`}
           thumbnail={video.snippet?.thumbnails?.medium?.url}
           channelTitle={video.snippet?.channelTitle}
           releaseTime={moment(video.snippet?.publishTime,"YYYYMMDD").fromNow()}

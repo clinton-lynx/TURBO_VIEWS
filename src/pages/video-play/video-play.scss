@@ -7,7 +7,7 @@
   
 }
 .videoplay {
-  padding: 5rem 5rem;
+  padding: 5rem 2.5rem;
   margin: 0 auto;
   max-width: 1300px;
   color: $white;
@@ -28,6 +28,17 @@
   @include breakpoint-down(1000px) {
     width: 100%;
   }
+}
+
+.video-play-frame{
+  border-radius: 50px;
+ .react-player{
+  // display: none;
+}
+html iframe .ytp-chrome-top .ytp-show-cards-title{
+display: none;
+background-color: brickred;
+}
 }
 .video-play__right {
   width: 40%;
@@ -85,6 +96,7 @@
     }
   }
 }
+
 
 .view-icon,
 .like-icon {

@@ -44,7 +44,7 @@ const Navbar = ({searchHandler}) => {
                         onClick={searchHandler}
             className="search-wrapper">
               <SearchIcon />
-            </div>
+            </div> 
           </div>
           <div className="mic-wrapper">
             <div className="mic">
