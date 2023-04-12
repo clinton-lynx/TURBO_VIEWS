@@ -1,17 +1,14 @@
 @import "../../assets/styles/main";
 
-
-.videoplay-wrapper{
+.videoplay-wrapper {
   background-color: $backgroundColor;
   margin-top: 65px;
-  
 }
 .videoplay {
   padding: 5rem 2.5rem;
   margin: 0 auto;
   max-width: 1300px;
   color: $white;
-
 
   @include flex-row-between-nowrap;
   align-items: flex-start;
@@ -30,15 +27,15 @@
   }
 }
 
-.video-play-frame{
+.video-play-frame {
   border-radius: 50px;
- .react-player{
-  // display: none;
-}
-html iframe .ytp-chrome-top .ytp-show-cards-title{
-display: none;
-background-color: brickred;
-}
+  .react-player {
+    // display: none;
+  }
+  html iframe .ytp-chrome-top .ytp-show-cards-title {
+    display: none;
+    background-color: brickred;
+  }
 }
 .video-play__right {
   width: 40%;
@@ -97,7 +94,6 @@ background-color: brickred;
   }
 }
 
-
 .view-icon,
 .like-icon {
   vertical-align: middle;
@@ -112,8 +108,9 @@ background-color: brickred;
   .video-play__channel-info__left {
     @include flex-row-between-nowrap;
     margin-bottom: 2rem;
-    .video-play__channel-icon {
-      width: 60px;
+    .video-play__channel-icon img {
+      width: 50px;
+      border-radius: 50%;
     }
     .video-play__channel-details-wrapper {
       margin-left: 20px;

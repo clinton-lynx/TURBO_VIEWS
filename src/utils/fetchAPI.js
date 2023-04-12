@@ -18,8 +18,12 @@ const options = {
 };
 
 export const fetchAPI = async (url) => {
-  const { data } = await axios.get(`${BASE_URL}/${url}`,options);
-  return data;
+  try{
+    const { data } = await axios.get(`${BASE_URL}/${url}`,options);
+    return data;
+  }catch(error){
+    console.log(error);
+  }
 // console.log(data) ;
 };
 const exp = '31068d680cmshd80b954efa430c5p1d7b8bjsn34ff62722862'

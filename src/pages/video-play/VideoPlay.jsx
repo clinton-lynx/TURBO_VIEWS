@@ -17,25 +17,36 @@ import { fetchAPI } from "../../utils/fetchAPI";
 const VideoPlay = () => { 
 
   const [videoDetails , setVideoDetails] = useState([]);
+  const [channelDetails , setChannelDetails] = useState([]);
+  const [suggestedVideos , setSuggestedVideos] = useState([]);
 
 
   const videoId = useParams().id; 
-console.log('wakanda');
-     
+  console.log('wakanda');
+  
   useEffect(() => {
     fetchAPI(`videos?part=snippet&id=${videoId}`).then((data) => setVideoDetails(data.items));
-    // setVideo(data)
+    fetchAPI(`search?part=snippet&relatedToVideoId=${videoId}&type=video`).then((data) => setSuggestedVideos(data.items));
     console.log(videoDetails);
   }, [videoId]);
   console.log(videoDetails);
-
+  console.log(suggestedVideos);
+  
+  const channelId  = videoDetails[0]?.snippet?.channelId;           
+  console.log(channelId);
+  useEffect(() => {
+    if(channelId){
+      fetchAPI(`channels?part=snippet&id=${channelId}`).then((data) => setChannelDetails(data.items));
+    }
+  }, [channelId]);
+    console.log(channelDetails);
   return (
     <div>
       <Navbar />
       <div className="videoplay-wrapper">
       <div className="videoplay">
-        <div className="video-play__left">
-          <div className="video-play-frame-wrapper">
+        <div className="video-play__left"> 
+          <div className="video-play-frame-wrapper"> 
             <div className="video-play-frame">
               {/* <img
                 src={require("../../assets/images/video-play.png")}
@@ -99,7 +110,7 @@ console.log('wakanda');
               <div className="video-play__channel-info__left">
                 <div className="video-play__channel-icon">
                   <img
-                    src={require("../../assets/images/videoplay-channel-icon.png")}
+                    src={ channelDetails[0]?.snippet?.thumbnails?.default?.url}
                     alt="channel-icon"
                     />
                 </div>
@@ -111,7 +122,7 @@ console.log('wakanda');
                   </div>
                   <div className="video-play__channel-subs-wrapper">
                     <h5 className="video-play__channel-subs">
-                      2.5M Subscribers
+                                           {millify( channelDetails[0]?.statistics?.subscriberCount, {precision: 3})}
                     </h5>
                   </div>
                 </div>
@@ -122,7 +133,7 @@ console.log('wakanda');
                 </div>
               </div>
             </div>
-            <div className="creator-details">
+            {/* <div className="creator-details">
               <span className="creator__name">Asake - Joha</span>
               <div className="creator__stream">
                 <span className="creator__stream--title">
@@ -144,7 +155,7 @@ console.log('wakanda');
                   http://www.instagram.com/asakemusic
                 </div></div>
               </div>
-            </div>
+            </div> */}
           </div>
                     </div>
         <div className="video-play__right">
@@ -163,7 +174,7 @@ console.log('wakanda');
             <NextVideo />
             <NextVideo />
             <NextVideo />
-            <NextVideo />
+            <NextVideo />   
             <NextVideo />
             <NextVideo />
             <NextVideo />
