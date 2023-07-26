@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import moment from 'moment';
 import millify from 'millify';
-import "./video-play.scss";
 import CategoryBar from "../../components/CategoryBar/CategoryBar";
 import Navbar from "../../components/Navbar/Navbar";
 import SideBar from "../../components/Sidebar/SideBar";
@@ -14,6 +13,7 @@ import {useParams} from 'react-router-dom';
 import 'react-html5video/dist/styles.css';
 import { fetchAPI } from "../../utils/fetchAPI";
 
+import "./video-play.scss";
 const VideoPlay = () => { 
 
   const [videoDetails , setVideoDetails] = useState([]);
@@ -163,8 +163,17 @@ const VideoPlay = () => {
             <h3 className="next-videos__title">Next Videos</h3>
           </div>
           <div className="next-videos-wrapper">
-            <NextVideo />
-            <NextVideo />
+          {suggestedVideos.map(video =>(
+        <NextVideo 
+        title={video.snippet?.title}
+        link={`videoplay/${video.id.videoId}`}
+        thumbnail={video.snippet?.thumbnails?.standard?.url}
+        channelTitle={video.snippet?.channelTitle}
+     />
+      ))
+        }
+           
+            {/* <NextVideo />
             <NextVideo />
             <NextVideo />
             <NextVideo />
@@ -177,7 +186,7 @@ const VideoPlay = () => {
             <NextVideo />   
             <NextVideo />
             <NextVideo />
-            <NextVideo />
+            <NextVideo /> */}
           </div>
         </div>
     </div>

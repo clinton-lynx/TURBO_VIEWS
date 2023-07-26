@@ -1,0 +1,62 @@
+/* CSS for the video card preloader */
+.video-card-preloader {
+    /* Set the dimensions and style of the preloader */
+    width: 300px;
+    height: 200px;
+    background-color: #f3f3f3;
+    /* Add styling for centering the preloader on the screen */
+    /* You can customize the positioning as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Loading animation */
+  .loading-animation {
+    /* Add styles for the wavy loading animation */
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wave {
+    /* Add styles for the waves in the loading animation */
+    width: 20px;
+    height: 20px;
+    background-color: #e1e1e1;
+    margin: 0 5px;
+    animation: wavy 1s infinite;
+  }
+  
+  @keyframes wavy {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* Video card styles */
+  .video-card {
+    /* Add styles for the video card component, e.g., spacing, fonts, etc. */
+  }
+  
+  .thumbnail {
+    /* Add styles for the thumbnail, e.g., dimensions, aspect ratio, etc. */
+  }
+  
+  .title {
+    /* Add styles for the title, e.g., font size, color, etc. */
+  }
+  

@@ -6,10 +6,17 @@
 
 .next-videocard {
   @include flex-row-start-nowrap;
+  align-items: flex-start;
   max-width: 500px;
-
+  @include breakpoint-down(1000px) {
+    max-width: 100%;
+  }
+color: $white;
   .next-videocard__thumbnail-wrapper {
-    max-width: 150px;
+    max-width: 200px;
+    .next-videocard__thumbnail{
+      border-radius: 12px;
+    }
   }
 
   .next-videocard__info{

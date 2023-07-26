@@ -31,7 +31,8 @@ const SideBar = () => {
             </li>
            <li className="side-tab-wrapper">
               <NavLink
-                to={`/Explore`}
+                to={`/`}
+                // to={`/Explore`}
                 className="side-tab"
               >
                 <div className="side-tab-icon"><Explore /></div>
@@ -40,7 +41,8 @@ const SideBar = () => {
             </li>
            <li className="side-tab-wrapper">
               <NavLink
-                to={`/Reels`}
+                to={`/`}
+                // to={`/Reels`}
                 className="side-tab"
               >
                 <div className="side-tab-icon"><VideoPlay/></div>
@@ -49,7 +51,8 @@ const SideBar = () => {
             </li>
            <li className="side-tab-wrapper">
               <NavLink
-                to={`/Subscription`}
+                to={`/`}
+                // to={`/Subscription`}
                 className="side-tab"
               >
                 <div className="side-tab-icon"><Playlist/></div>
@@ -58,7 +61,8 @@ const SideBar = () => {
             </li>
            <li className="side-tab-wrapper">
               <NavLink
-                to={`/Library`}
+                to={`/`}
+                // to={`/Library`}
                 className="side-tab"
               >
                 <div className="side-tab-icon"><Library/></div>

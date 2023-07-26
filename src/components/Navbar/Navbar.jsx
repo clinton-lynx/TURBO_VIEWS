@@ -35,7 +35,8 @@ const Navbar = ({searchHandler}) => {
           </div>
         </div>
         <div className="header__middle">
-          <div className="searchbar">
+          <form className="searchbar"
+            onSubmit={searchHandler} >
             <input 
                         // onChange={searchHandler}
             className="header__input" 
@@ -45,7 +46,7 @@ const Navbar = ({searchHandler}) => {
             className="search-wrapper">
               <SearchIcon />
             </div> 
-          </div>
+          </form>
           <div className="mic-wrapper">
             <div className="mic">
               <Mic />

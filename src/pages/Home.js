@@ -14,6 +14,7 @@ const Home = () => {
 
 
   const searchHandler = (e) =>{
+    e.preventDefault();
     const searchInput = document.querySelector(".header__input");
     setCategory(searchInput.value.trim())
     // searchInput.value = '';
@@ -23,7 +24,7 @@ const Home = () => {
   
     
   useEffect(() => {
-  fetchAPI(`search?part=snippet&q=${categories}`).then((data) => setVideo(data.items));
+  fetchAPI(`search?part=snippet&q=  ${categories}`).then((data) => setVideo(data.items));
   // setVideo(data)
 }, [categories]);
 console.log(video);
