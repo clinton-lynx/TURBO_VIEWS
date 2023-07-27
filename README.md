@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# TurboViews - Online Video Streaming Platform
+
+TurboViews is a user-friendly video streaming application for watching favorite videos, sport events,reels and stream online games, offering a range of features similar to popular streaming services like YouTube. TurboViews is built using **React18**, **JavaScript**, and **SCSS**, and it utilizes YouTube's API to fetch and display video content.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. Video Search: Easily search for videos based on keywords or phrases.
+2. Sorting Options: Explore videos with different sorting techniques for a personalized experience.
+3. Video Playback: Watch videos directly on TurboViews with a smooth and seamless playback.
+4. Video Details: Access comprehensive information about each video, such as release date, duration, channel name, and video title.
+5. Suggested Videos: Get personalized video suggestions based on your viewing history.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home page:
 
-### `npm run build`
+![Screenshot 2023-07-26 230942](https://github.com/clinton-lynx/TURBO_VIEWS/assets/104448657/ac3dd52c-9bc7-4f2a-8854-6a9c9297baab)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### video play:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot 2023-07-26 231305](https://github.com/clinton-lynx/TURBO_VIEWS/assets/104448657/084d1023-2e52-437b-8b2b-61f586d17f08)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 📚 Getting Started
+To get a local copy up and running follow the following steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 👇🏽 Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Before installation, please make sure you have already installed the following tools:
 
-### Code Splitting
+- [Git](https://git-scm.com/downloads)
+- [NodeJs](https://nodejs.org/en/download/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🛠️ Installation
 
-### Analyzing the Bundle Size
+1. [Fork](https://github.com//clinton-lynx/cryptomaniac/fork) the project. Click on the fork icon in the top right to get started  
+2. Clone the project, you can use the following command:
+    ```bash
+    git clone https://github.com/<your-github-username>/TURBO VIEWS
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Navigate to the project directory
+   ```bash
+   cd TURBO_VIEWS
+   ```
 
-### Making a Progressive Web App
+4. Install dependencies with `npm install`
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Run npm start in both folders also
 
-### Advanced Configuration
+   ```bash
+   npm start
+   ```
+> Both ends of the project rely on each other, for you to work on any end(client or server) they both need to be started with `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎨 Demo
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Check out the live demo of TubeViews at [Turboviews].(https://turboviews.netlify.app/)
