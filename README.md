@@ -71,4 +71,4 @@ Before installation, please make sure you have already installed the following t
 
 ## 🎨 Demo
 
-Check out the live demo of TubeViews at [Turboviews].(https://turboviews.netlify.app/)
+Check out the live demo of TubeViews at [Turboviews](https://turboviews.netlify.app/)
